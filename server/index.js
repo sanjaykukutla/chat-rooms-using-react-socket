@@ -23,7 +23,7 @@ io.on("connection",(socket) => {
     })
 
     socket.on("joinRoom",(data)=>{
-        socket.join(data)
+        socket.join(data.roomnumber)
         console.log(`user with the id ${socket.id} joined the room id of ${data}`);
     })
     socket.on("disconnect",() => {
